@@ -25,6 +25,15 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
+		<Navbar>
+		  <Navbar.Brand href="#home">ShoBiz</Navbar.Brand>
+		  <Navbar.Toggle />
+		  <Navbar.Collapse className="justify-content-end">
+			<Navbar.Text>
+			  These are the<a href={`/posts`}>Posts</a>
+			</Navbar.Text>
+		  </Navbar.Collapse>
+		</Navbar>
         {home ? (
           <>
             <img
